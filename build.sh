@@ -19,4 +19,4 @@ docker exec ollama ollama ps
 
 docker commit ollama $LOCATION
 
-docker push --platform linux/amd64 $LOCATION
+docker push $LOCATION
