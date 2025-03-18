@@ -23,3 +23,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build the Docker image
         run: ./build.sh
+      - name: Push
+        if: github.event_name != 'pull_request'
+        run: |
+          docker push garethjevans/ollama

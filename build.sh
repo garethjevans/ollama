@@ -5,5 +5,3 @@ set -euo pipefail
 LOCATION=garethjevans/ollama
 
 docker build -t $LOCATION .
-
-docker push $LOCATION
